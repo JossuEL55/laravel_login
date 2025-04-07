@@ -1,0 +1,124 @@
+/* public/css/login.css */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #e3f2fd, #ffffff);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Aseguramos que todo se alinee verticalmente */
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+form {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.05);
+    width: 100%;
+    max-width: 400px;
+    margin: 20px;
+    animation: fadeIn 0.6s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Grupos de campos - se aplica a tus <div> contenedores */
+form > div {
+    margin-bottom: 20px;
+}
+
+/* Etiquetas - estilo moderno */
+form label {
+    display: block;
+    margin-bottom: 8px;
+    color: #2e3a59;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+/* Campos de entrada */
+form input[type="email"],
+form input[type="password"] {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #d0d7e2;
+    border-radius: 8px;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    background-color: #f9fbfc;
+}
+
+form input:focus {
+    outline: none;
+    border-color: #4a90e2;
+    box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.2);
+}
+
+/* Botón de submit */
+form button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background: #4a90e2;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+form button[type="submit"]:hover {
+    background: #357ab8;
+}
+
+/* Mensajes de error */
+form > div > ul {
+    list-style: none;
+    padding: 0;
+    color: #d93025;
+    margin: 15px 0;
+}
+
+form > div > ul li {
+    font-size: 14px;
+    padding: 5px 0;
+}
+
+/* Texto del pie */
+form > p {
+    text-align: center;
+    margin-top: 20px;
+    color: #555;
+    font-size: 14px;
+}
+
+form > p a {
+    color: #4a90e2;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+form > p a:hover {
+    text-decoration: underline;
+    color: #357ab8;
+}
+

@@ -1,42 +1,48 @@
 <!-- resources/views/auth/register.blade.php -->
-@extends('layouts.app') <!-- Si tienes un layout común para todas las vistas -->
+@extends('layouts.app')
 
 @section('content')
-    <form method="POST" action="{{ route('register') }}">
-        @csrf
+    <link rel="stylesheet" href="{{ asset('css/login.css') }}">
 
-        <div>
-            <label for="name">Nombre completo</label>
-            <input id="name" type="text" name="name" value="{{ old('name') }}" required autofocus>
-        </div>
+    <div class="login-container">
+        <form method="POST" action="{{ route('register') }}">
+            @csrf
 
-        <div>
-            <label for="email">Correo electrónico</label>
-            <input id="email" type="email" name="email" value="{{ old('email') }}" required>
-        </div>
-
-        <div>
-            <label for="password">Contraseña</label>
-            <input id="password" type="password" name="password" required>
-        </div>
-
-        <div>
-            <label for="password_confirmation">Confirmar contraseña</label>
-            <input id="password_confirmation" type="password" name="password_confirmation" required>
-        </div>
-
-        <div>
-            <button type="submit">Registrar</button>
-        </div>
-
-        @if ($errors->any())
             <div>
-                <ul>
-                    @foreach ($errors->all() as $error)
-                        <li>{{ $error }}</li>
-                    @endforeach
-                </ul>
+                <label for="name">Nombre completo</label>
+                <input id="name" type="text" name="name" value="{{ old('name') }}" required autofocus>
             </div>
-        @endif
-    </form>
+
+            <div>
+                <label for="email">Correo electrónico</label>
+                <input id="email" type="email" name="email" value="{{ old('email') }}" required>
+            </div>
+
+            <div>
+                <label for="password">Contraseña</label>
+                <input id="password" type="password" name="password" required>
+            </div>
+
+            <div>
+                <label for="password_confirmation">Confirmar contraseña</label>
+                <input id="password_confirmation" type="password" name="password_confirmation" required>
+            </div>
+
+            <div>
+                <button type="submit">Registrar</button>
+            </div>
+
+            @if ($errors->any())
+                <div>
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
+
+            <p>¿Ya tienes una cuenta? <a href="{{ route('login') }}">Inicia sesión</a></p>
+        </form>
+    </div>
 @endsection
