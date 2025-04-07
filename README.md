@@ -1,4 +1,4 @@
-# 🧾 Laravel Auth App
+# 🧾 Laravel Login Web
 
 Una aplicación web simple de login de usuarios desarrollada con **Laravel**. Este proyecto permite a los usuarios **registrarse**, **iniciar sesión**, y **cerrar sesión**, con formularios validados y manejo de sesiones de forma segura.
 
