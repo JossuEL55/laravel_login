@@ -3,10 +3,15 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 
+Route::get('/', function () {
+    return view('layouts.app'); // O cualquier otra vista que quieras mostrar
+});
+
 // Ruta para la página principal (por ejemplo, después del login)
 Route::get('/home', function () {
     return view('home'); // Si tienes una vista home.blade.php
-})->name('home');
+})->name('home')->middleware('auth'); // Middleware para verificar autenticación
+
 
 // Ruta para mostrar el formulario de login
 Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login');
