@@ -2,13 +2,14 @@
 
 Una aplicación web simple de login de usuarios desarrollada con **Laravel**. Este proyecto permite a los usuarios **registrarse**, **iniciar sesión**, y **cerrar sesión**, con formularios validados y manejo de sesiones de forma segura.
 
+![Laravel](https://laravel.com/img/logomark.min.svg)
+
 ## Tabla de contenidos
 
 - [Descripción](#descripción)
 - [Características](#características)
 - [Tecnologías](#tecnologías)
 - [Uso](#uso)
-- [Estructura del Proyecto](#estructura-del-proyecto)
 - [Estado](#estado)
 - [Autor](#autor)
 - [Licencia](#licencia)
@@ -26,7 +27,7 @@ Este proyecto fue desarrollado como una introducción a Laravel como segunda tar
 - Rutas bien definidas para cada funcionalidad.
 - Uso de migraciones y base de datos MySQL.
 
-## 🛠Tecnologías
+## Tecnologías
 
 - Karavek
 - PHP 
@@ -42,30 +43,6 @@ Al iniciar sesión, serás redirigido a la página principal.
 
 Puedes cerrar sesión desde la opción correspondiente en la vista.
 
-## Estructura del proyecto
-
-app/
-├── Http/
-│   └── Controllers/
-│       └── AuthController.php
-├── Models/
-│   └── User.php
-database/
-├── migrations/
-│   ├── create_users_table.php
-│   ├── create_cache_table.php
-│   └── create_jobs_table.php
-public/
-└── css/
-    ├── app.css
-    └── home.css
-    └── logni.css
-resources/
-├── views/
-routes/
-└── web.php
-
-En views se encuentran todas las vistas aplicadas.
 
 ## Estado
 
@@ -75,8 +52,8 @@ En views se encuentran todas las vistas aplicadas.
 
  Jossue Ayala.
 
-  ## Autor
+ ## Licencia
 
-  Este proyecto está licenciado bajo la Licencia MIT.
+Este proyecto está licenciado bajo la Licencia MIT.
  
  
